@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="LAB_3D_Math_APP_DarlingP08012020.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LAB_3D_Math_APP_DarlingP08012020"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{ThemeResource ComboBoxItemPressedBackgroundThemeBrush}">
+        <Grid Margin="12,0,12,0" Background="{ThemeResource SystemAccentColor}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="46*"/>
+                <RowDefinition Height="148*" />
+                <RowDefinition Height="32*" />
+                <RowDefinition Height="258*" />
+                <RowDefinition Height="108*" />
+                <RowDefinition Height="90*" />
+                <RowDefinition Height="46*" />
+                <RowDefinition Height="91*" />
+                <RowDefinition Height="46*" />
+                <RowDefinition Height="90*" />
+                <RowDefinition Height="45*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="left" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Baskerville Old Face" Text="Left Operand" FontSize="30" Margin="120,2,0,0" Height="34" Width="164" Grid.RowSpan="2"/>
+            <TextBlock x:Name="right" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Baskerville Old Face" Text="Right Operator" FontSize="30" Margin="111,0,0,0" Height="34" Width="181"/>
+            <TextBlock x:Name="title"  HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Elephant" Text="Math App" FontSize="50" Margin="185,58,0,0" Grid.Column="1" Height="64" Grid.Row="1" Width="247" FocusVisualPrimaryBrush="#FFE25757"/>
+            <TextBox x:Name="leftinput" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,80,0,0" Width="172" Height="32" />
+            <TextBox x:Name="rightinput"  Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="135,80,0,0" Width="172" Height="32" Background="#66FFFFFF" />
+            <StackPanel x:Name="operators" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0" Height="204" Width="194">
+                <RadioButton x:Name="addition" VerticalAlignment="Top" Content="Addition" FontSize=" 30" FontFamily="Baskerville Old Face"/>
+                <RadioButton x:Name="subtraction" VerticalAlignment="Top" Content="Subtraction" FontSize=" 30" FontFamily="Baskerville Old Face"/>
+                <RadioButton x:Name="multiplication" Content="Multiplication" FontSize=" 30" FontFamily="Baskerville Old Face" Width="264"/>
+                <RadioButton x:Name="division" Content="Divition" FontSize=" 30" FontFamily="Baskerville Old Face" Width="209"/>
+                <RadioButton x:Name="remainder" Content="Remainder" FontSize=" 30" FontFamily="Baskerville Old Face" Width="201"/>
+            </StackPanel>
+            <Button x:Name="calculate"  Content="Calculate" FontFamily="Baskerville Old Face" FontSize="30" Margin="137,0,0,0" Height="74" Grid.Row="5" Width="280" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Background="#33D16F6F" Click="calculateClick"/>
+            <TextBlock Grid.Row="7" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Text="The Answer:" FontFamily="Baskerville Old Face" FontSize="30" Margin="142,23,0,0" />
+            <TextBox x:Name="answer" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3,8,0,0" Width="618" Height="68" Grid.Column="1" />
+            <Button x:Name="exitBtn" Content="Exit" FontSize="30" Grid.Column="2" Margin="142,54,0,0" Grid.Row="1" VerticalAlignment="Top" Click="exitBtn_Click"/>
+
+
+        </Grid>
+    </Grid>
+</Page>
